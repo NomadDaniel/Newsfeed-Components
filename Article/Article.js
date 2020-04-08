@@ -110,7 +110,7 @@ const data = [
   Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
 
   Step 3: return the entire component.*/
-function articleCreator(title, date, firstParagraph, secondParagraph, thirdParagraph){
+function articleCreator(title, date, firstParagraph, secondParagraph, thirdParagraph) {
   const article = document.createElement("div");
   const articleTitle = document.createElement("h2");
   const articleContentOne = document.createElement("p");
@@ -131,7 +131,7 @@ function articleCreator(title, date, firstParagraph, secondParagraph, thirdParag
   articleContentOne.classList.add("date")
   articleSpan.classList.add("expandButton")
 
-  articleSpan.textContent = "Click Me!"
+  articleSpan.textContent = "Click this button!"
 
   articleTitle.textContent = title;
   articleContentOne.textContent = date;
@@ -139,9 +139,8 @@ function articleCreator(title, date, firstParagraph, secondParagraph, thirdParag
   articleContentThree.textContent = secondParagraph;
   articleContentFour.textContent = thirdParagraph;
 
-  articleSpan.addEventListener("click", e =>{
+  articleSpan.addEventListener("click", e => {
     article.classList.toggle("article-open")
-
   })
 
 // Step 3: return the entire component.
