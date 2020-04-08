@@ -86,7 +86,7 @@ const data = [
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
   }
-];
+]
 
 
 
@@ -112,46 +112,46 @@ const data = [
   Step 3: return the entire component.*/
 function articleCreator(title, date, firstParagraph, secondParagraph, thirdParagraph) {
   
-  const article = document.createElement("div");
-  const articleTitle = document.createElement("h2");
-  const articleDate = document.createElement("p");
-  const articleFirstP = document.createElement("p");
-  const articleSecondP = document.createElement("p");
-  const articleThirdP = document.createElement("p");
-  const articleSpan = document.createElement("span");
+  const article = document.createElement("div")
+  const articleTitle = document.createElement("h2")
+  const articleDate = document.createElement("p")
+  const articleFirstP = document.createElement("p")
+  const articleSecondP = document.createElement("p")
+  const articleThirdP = document.createElement("p")
+  const articleSpan = document.createElement("span")
 
-  article.append(articleTitle);
-  article.append(articleDate);
-  article.append(articleFirstP);
-  article.append(articleSecondP);
-  article.append(articleThirdP);
-  article.append(articleSpan);
+  article.append(articleTitle)
+  article.append(articleDate)
+  article.append(articleFirstP)
+  article.append(articleSecondP)
+  article.append(articleThirdP)
+  article.append(articleSpan)
 
-  article.classList.add("article");
+  article.classList.add("article")
   articleDate.classList.add("date")
   articleSpan.classList.add("expandButton")
 
   articleSpan.textContent = "Click this button!"
 
-  articleTitle.textContent = title;
-  articleDate.textContent = date;
-  articleFirstP.textContent = firstParagraph;
-  articleSecondP.textContent = secondParagraph;
-  articleThirdP.textContent = thirdParagraph;
+  articleTitle.textContent = title
+  articleDate.textContent = date
+  articleFirstP.textContent = firstParagraph
+  articleSecondP.textContent = secondParagraph
+  articleThirdP.textContent = thirdParagraph
 
   articleSpan.addEventListener("click", e => {
     article.classList.toggle("article-open")
   })
 
 // Step 3: return the entire component.
-  return article;
+  return article
 }
 
 //   Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
 
 //   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
-const newArticles = document.querySelector('.articles');
+const newArticles = document.querySelector('.articles')
 
 data.forEach (data => {
 newArticles.append(articleCreator(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph))
