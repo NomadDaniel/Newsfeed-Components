@@ -113,7 +113,7 @@ const data = [
 
 */
 function createArticle (property) {
-//elements following HTML structure
+//  elements following HTML structure
 
 const container = document.createElement("div")
 const title = document.createElement("h2")
@@ -123,8 +123,32 @@ const secondParagraph = document.createElement("p")
 const thirdParagraph = document.createElement("p")
 const buttonExpand = document.createElement("span")
 
-//structure using append or appendChild
+//  structure using append or appendChild
 container.append(title, date, firstParagraph, secondParagraph, thirdParagraph, buttonExpand)
 
-}
-debugger
+//  classes w classList
+container.classList.add("article", "article-open")
+date.classList.add("date")
+buttonExpand.classList.add("expandButton")
+
+//  text w textContent
+title.textContent = property.title 
+date.textContent = property.date
+firstParagraph.textContent = property.firstParagraph
+secondParagraph.textContent = property.secondParagraph
+thirdParagraph.textContent = property.thirdParagraph
+buttonExpand.textContent = property.buttonExpand
+
+//  events w addEventListener
+buttonExpand.addEventListener("click", () => {
+  container.classList.toggle("article-open")
+  })
+  return container
+  }
+
+//   
+  data.forEach(element => {
+    let createdArticle = createArticle(element);
+    document.querySelector(".articles").appendChild(createdArticle);
+  }) 
+
