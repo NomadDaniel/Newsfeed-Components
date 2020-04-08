@@ -7,9 +7,9 @@ let menuItems = [
   'Tech Trends',
   'Music',
   'Log Out'
-];
+]
 
-function menuBar(){
+function menuBar() {
   const newBar = document.createElement("div");
   const ulLine = document.createElement('ul');
 
@@ -18,23 +18,22 @@ function menuBar(){
 
   const button = document.querySelector('.menu-button')
 
-  button.addEventListener("click", ()=>{
+  button.addEventListener("click", () => {
     newBar.classList.toggle("menu--open")
   })
 
-   menuItems.forEach(item=>{
+   menuItems.forEach (item => {
     console.log(item)
     const list = document.createElement("li")
     list.textContent = item
 
     ulLine.appendChild(list)
-
   })
 
   return newBar;
 }
 
-const newHeader = document.querySelector('.header');
+const newHeader = document.querySelector('.header')
 
 menuItems.forEach (item => {
   newHeader.appendChild(menuBar(item))
