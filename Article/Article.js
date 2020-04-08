@@ -110,7 +110,7 @@ const data = [
   Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
 
   Step 3: return the entire component.*/
-function newFunction(title, date, firstParagraph, secondParagraph, thirdParagraph){
+function articleCreator(title, date, firstParagraph, secondParagraph, thirdParagraph){
   const article = document.createElement("div");
   const articleTitle = document.createElement("h2");
   const articleContentOne = document.createElement("p");
@@ -132,7 +132,7 @@ function newFunction(title, date, firstParagraph, secondParagraph, thirdParagrap
   articleSpan.classList.add("expandButton")
 
   articleSpan.textContent = "Click Me!"
-  
+
   articleTitle.textContent = title;
   articleContentOne.textContent = date;
   articleContentTwo.textContent = firstParagraph;
@@ -143,22 +143,22 @@ function newFunction(title, date, firstParagraph, secondParagraph, thirdParagrap
     article.classList.toggle("article-open")
 
   })
+
+// Step 3: return the entire component.
   return article;
 }
-
-  // Step 3: return the entire component.
-  const newArticles = document.querySelector('.articles');
-
-  // console.log(accordion)
-
-    data.forEach( data => {
-      // console.log("creating panels", data.title)
-      newArticles.append(newFunction(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph))
-    })
 
 //   Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
 
 //   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 // */
+
+const newArticles = document.querySelector('.articles');
+
+data.forEach (data => {
+newArticles.append(articleCreator(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph))
+})
+
+
 
