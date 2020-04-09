@@ -2,6 +2,7 @@
   position: absolute;
   left: 20px;
   cursor: pointer;
+  // transition: ease 2s;
 }
 
 .menu {
@@ -16,6 +17,7 @@
   border-left: none;
   border-bottom: none;
   z-index: 2; /* This set the layer level of the element, it has precendence over initial level of 1*/
+  // transition: ease 2s;
 }
 
 .menu ul li{
@@ -23,8 +25,14 @@
   font-size: 32px;
   padding: 30px 0;
   text-align: center;
+  transition: ease 2s;
 }
 
 .menu--open {
   display: block;
+  // transition: ease 2s;
+  // .style.transitionTimingFunction = "linear";
+  // transition-timing-function: ease-in-out;
+  // transition: width 2s;
+  // transition: width 2s, height 2s, transform 2s;
 }

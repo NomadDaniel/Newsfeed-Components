@@ -85,6 +85,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'What chu know bout titles?',
+    date: 'none of your business',
+    firstParagraph: `I am the best paragraph that ever is was or will be. Everybody wants some of my sweet sweet paragraph goodness. When I was just a teenie tiny paragraph my moma told me that I would grow up to be the baddest paragraph in all the land. Little did she know, I already was.`,
+
+    secondParagraph: `raw i'm give it to ya, wit no trivia, raw like cocaine straight from bolivia. my hip hop will rock and shock the nation like the imancipation proclimation. we mcs, approach wit slangas dead, you mis'well run into the wall and bang your head. i push a force a force your doubting, i'm making devils cower to the caucus mountains`,
+
+    thirdParagraph: `spider monkey, bobcat, lemir, silverback, squirrel, salamandar, marlin, gopher, turtle, otter, spider monkey, bobcat, lemir, silverback, squirrel, salamandar, marlin, gopher, turtle, otter, spider monkey, bobcat, lemir, silverback, squirrel, salamandar, marlin, gopher, turtle, otter, spider monkey, bobcat, lemir, silverback, squirrel, salamandar, marlin, gopher, turtle, otter, spider monkey, bobcat, lemir, silverback, squirrel, salamandar, marlin, gopher, turtle, otter`
   }
 ]
 
@@ -139,8 +148,12 @@ function articleCreator(title, date, firstParagraph, secondParagraph, thirdParag
   articleSecondP.textContent = secondParagraph
   articleThirdP.textContent = thirdParagraph
 
-  articleSpan.addEventListener("click", e => {
+  articleSpan.addEventListener("click", () => {
     article.classList.toggle("article-open")
+    articleSpan.style.border = "2px solid black"
+    articleSpan.style.backgroundColor = "lightblue"
+    article.style.transition = "ease 2s"
+
   })
 
 // Step 3: return the entire component.
