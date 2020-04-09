@@ -152,7 +152,7 @@ function articleCreator(title, date, firstParagraph, secondParagraph, thirdParag
     article.classList.toggle("article-open")
     articleSpan.style.border = "2px solid black"
     articleSpan.style.backgroundColor = "lightblue"
-    article.style.transition = "ease 2s"
+    article.style.transition = "ease 0.5s"
 
   })
 

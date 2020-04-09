@@ -24,7 +24,7 @@ function menuBar() {
     newBar.classList.toggle("menu--open")
     // newBar.style.transition = "ease 2s"
     // newBar.style.color = "red"
-    newBar.style.border = "5px solid blue"
+    // newBar.style.border = "5px solid blue"
   })
 
    menuItems.forEach (item => {
