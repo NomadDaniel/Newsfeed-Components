@@ -1,16 +1,48 @@
 /* This is the data we will be using, study it but don't change anything, yet. */
 
 let menuItems = [
-  'Students',
-  'Faculty',
+  "Students",
+  "Faculty",
   "What's New",
-  'Tech Trends',
-  'Music',
-  'Log Out'
-];
+  "Tech Trends",
+  "Music",
+  "Log Out",
+  "你妈妈",
+  "你爸爸"
+]
+
+function menuBar() {
+  const newBar = document.createElement("div")
+  const ulLine = document.createElement('ul')
+
+  newBar.classList.add("menu")
+  newBar.append(ulLine)
+
+  const button = document.querySelector('.menu-button')
+  // const menuOpen = document.querySelector('.menu--open')
+  button.addEventListener("click", () => {
+    newBar.classList.toggle("menu--open")
+    // newBar.style.transition = "ease 2s"
+    // newBar.style.color = "red"
+    // newBar.style.border = "5px solid blue"
+  })
+
+   menuItems.forEach (item => {
+    console.log(item)
+    const list = document.createElement("li")
+    list.textContent = item
+
+    ulLine.appendChild(list)
+  })
+
+  return newBar
+}
+
+const newHeader = document.querySelector('.header')
+
+newHeader.appendChild(menuBar())
 
 /* 
-
   Step 1: Write a function that will create a menu component as seen below:
 
   <div class="menu">
@@ -33,3 +65,4 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+
